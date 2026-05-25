@@ -1,0 +1,37 @@
+//JCL2    JOB ,MSGLEVEL=(2,0)
+//EXP EXPORT SYMLIST=*
+//BEFORE   EXEC PGM=IKJEFT01,PARM='%PREJCL2'
+//SYSPROC  DD DISP=SHR,DSN=ZXP.PUBLIC.EXEC
+//SYSTSPRT DD SYSOUT=*
+//SYSTSIN  DD DUMMY
+//*-----------------------------------------------------------
+//*
+//* TO SOLVE THIS CHALLENGE, NO CHANGE NEEDED TO COBOL, AND
+//* CONCENTRATE ON UNDERSTANDING THE LINK BETWEEN:
+//* +  COBOL FILE-CONTROL ASSIGN NAME (PROGRAM INTERNAL NAME)
+//* +  JCL DD NAME                    (JOB NAME TO MATCH COBOL)
+//* +  JCL DD DSN NAME                (CURRENT DATASET TO USE)
+//*
+//*-----------------------------------------------------------
+//***************************************************/
+//COBRUN  EXEC IGYWCL
+//COBOL.SYSIN  DD DISP=SHR,DSN=ZXP.PUBLIC.SOURCE(CBL0001)
+//LKED.SYSLMOD DD DISP=SHR,DSN=&SYSUID..LOAD(CBL0001)
+//***************************************************/
+// IF RC = 0 THEN
+//***************************************************/
+//RUN     EXEC PGM=CBL0001
+//STEPLIB   DD DISP=SHR,DSN=&SYSUID..LOAD
+//FNAMES    DD DISP=SHR,DSN=ZXP.PUBLIC.INPUT(FNAMES)
+//LNAMES    DD DISP=SHR,DSN=ZXP.PUBLIC.INPUT(LNAMES)
+//COMBINED  DD DISP=SHR,DSN=&SYSUID..OUTPUT(NAMES)  <== FIX THIS ONE
+//SYSOUT    DD SYSOUT=*,OUTLIM=15000
+//CEEDUMP   DD DUMMY
+//SYSUDUMP  DD DUMMY
+//***************************************************/
+// ELSE
+// ENDIF
+//AFTER    EXEC PGM=IKJEFT1A
+//SYSTSPRT DD SYSOUT=*
+//SYSTSIN  DD *,SYMBOLS=EXECSYS
+LISTDS '&SYSUID..OUTPUT(NAMES)'
