@@ -20,9 +20,9 @@ logging off the system.
   Up/Down, Ctrl (left) to reset locked keyboard
 
 ## Commands used
-logon Z76689
-tso submit 'ZXP.PUBLIC.JCL(CHKTSO2)'
-logoff
+- logon Z76689
+- tso submit 'ZXP.PUBLIC.JCL(CHKTSO2)'
+- logoff
 
 ## Completion
 Submitted CHKTSO2 verification job via TSO command line on ISPF successfully.
