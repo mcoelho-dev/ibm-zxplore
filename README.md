@@ -1,17 +1,16 @@
 # IBM Z Xplore Challenges
-
 Hands-on exercises and challenges completed on the **IBM Z Xplore** mainframe learning platform, covering everything from environment setup and JCL to programming languages, security, and middleware on z/OS.
 
 🎓 **Status:** Program completed — final certificates earned.
 
 ## About IBM Z Xplore
-
 IBM Z Xplore is a free, challenge-based learning platform that provides hands-on access to a real IBM mainframe environment, guiding learners through progressively advanced topics across the z/OS ecosystem.
 
 ## Certificates
 
-<!-- Add certificate images/badges here, e.g.: -->
-<!-- ![IBM Z Xplore Certificate](certificates/ibm-z-xplore-certificate.png) -->
+[![IBM Z Xplore - Concepts](https://images.credly.com/size/340x340/images/0f3e4162-ab6b-457c-8c0d-835a14680666/image.png)](https://www.credly.com/badges/7aba723b-b6e5-4e5e-b8af-92edc518cf44/public_url)
+[![IBM Z Xplore - Advanced](https://images.credly.com/size/340x340/images/9dde9b48-6cec-4bc4-ab33-ffeac5c681c3/image.png)](https://www.credly.com/badges/1dffb406-7596-487a-84a0-346f88100787/public_url)
+[![IBM Z Xplore - All Stars](https://images.credly.com/size/340x340/images/cf76c04a-d15b-4ca8-8207-7b3269222877/IBM_20Z_20Xplore_20All_20Star.png)](https://www.credly.com/badges/9264789e-96cc-486c-92cc-7443cfc9ed87/public_url)
 
 ## Challenges
 
@@ -67,7 +66,6 @@ IBM Z Xplore is a free, challenge-based learning platform that provides hands-on
 | [WRAPUP](./WRAPUP) | ZOAU Python scripting — closing project |
 
 ## Repository Structure
-
 Each folder corresponds to one challenge and contains its own `README.md` with:
 - **Overview** — what the challenge covers
 - **What I practiced** — skills exercised
@@ -76,7 +74,6 @@ Each folder corresponds to one challenge and contains its own `README.md` with:
 - **Completion** — confirmation of the finished challenge
 
 ## Technologies
-
 - JCL, TSO/ISPF, SDSF, USS
 - COBOL, PL/I, Assembler, REXX
 - Python, Node.js, Go
